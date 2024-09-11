@@ -11,3 +11,7 @@ const calculateDayOfWeek = (dob) => {
   const date = new Date(dob);
   return date.getDay();  // Returns day of the week (0 = Sunday, 6 = Saturday)
 };
+
+const getAkanName = (gender, day) => {
+  return akanNames[gender][day];
+};
