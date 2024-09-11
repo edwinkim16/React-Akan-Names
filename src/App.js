@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import FormComponent from "./FormComponent";
+import ResultComponent from "./ResultComponent";
 
 const App = () => {
   const [dob, setDob] = useState("");
