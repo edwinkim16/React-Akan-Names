@@ -2,15 +2,7 @@ import React, { useState } from "react";
 import FormComponent from "./FormComponent";
 import ResultComponent from "./ResultComponent";
 
-const App = () => {
-  const [dob, setDob] = useState("");
-  const [gender, setGender] = useState("");
-  const [akanName, setAkanName] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const day = calculateDayOfWeek(dob);
-    const name = getAkanName(gender, day);
-    setAkanName(name);
+const akanNames = {
+  male: ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"],
+  female: ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"],
 };
-return()
