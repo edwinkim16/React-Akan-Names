@@ -15,3 +15,21 @@ const calculateDayOfWeek = (dob) => {
 const getAkanName = (gender, day) => {
   return akanNames[gender][day];
 };
+
+const App = () => {
+  const [dob, setDob] = useState("");
+  const [gender, setGender] = useState("");
+  const [akanName, setAkanName] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!dob || !gender) {
+      alert("Please select both date of birth and gender!");
+      return;
+    }
+
+    const day = calculateDayOfWeek(dob);
+    const name = getAkanName(gender, day);
+    setAkanName(name);
+}
+};
