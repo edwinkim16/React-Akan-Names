@@ -31,5 +31,19 @@ const App = () => {
     const day = calculateDayOfWeek(dob);
     const name = getAkanName(gender, day);
     setAkanName(name);
-}
+  }
+  return (
+    <div>
+      <h1>Akan Name Generator</h1>
+      <FormComponent 
+        dob={dob} 
+        setDob={setDob} 
+        gender={gender} 
+        setGender={setGender} 
+        handleSubmit={handleSubmit} 
+      />
+      <ResultComponent akanName={akanName} />
+    </div>
+  );
 };
+export default App;
